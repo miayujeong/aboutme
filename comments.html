@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <title>COMMENTS : yujeong's page</title>
+    <link rel="stylesheet" href="websystems.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="wsimages/starfavicon.png"
+    />
+  </head>
+  <body>
+    <ul class="topnav">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="past.html">PAST</a></li>
+      <li><a href="future.html">FUTURE</a></li>
+      <li><a href="comments.html">COMMENTS</a></li>
+    </ul>
+    <div class="header">
+      <h1>COMMENTS</h1>
+    </div>
+    <div class="contents-wrapper">
+      <div class="comment-box">
+        <h3>Reflection on overall design</h3>
+        <p>
+          Overall, I made an effort to ensure that every page on this website
+          provides a sense of unity for users. I used similar structure
+          including the same top navigation bar across all pages and limited the
+          color palette, including the background color. Additionally, elements
+          have been added to assist diabled user exploring the website.
+        </p>
+      </div>
+      <div class="comment-box">
+        <h3>Technical aspects on my website</h3>
+        <h4>Structure</h4>
+        <p>
+          All pages of this website has a common structure: a top navigation
+          bar, a header (except for the index page), contents, and a footer.
+          These individual elements are styled separately using
+          <a class="names">&lt;div&gt;</a> tags.
+        </p>
+        <h4>Top naviation bars</h4>
+        <p>
+          Pages of this website can be navigated through the navigation bar.
+          Each item uses the <a class="names">&lt;a&gt;</a> tag to possess the
+          link to other page. They are set style for the hover state using
+          <a class="names">:hover</a> property.
+        </p>
+        <h4>Parallel columns</h4>
+        <p>
+          Exploring
+          <a class="link" href="https://www.w3schools.com/" target="_blank"
+            >W3cschool</a
+          >
+          website, I learned how to make webpage with equal or unequal columns.
+          This structure is applied to the
+          <a class="link" href="index.html">INDEX</a> and the
+          <a class="link" href="future.html">FUTURE</a> page. On both page,
+          there is a parent element that wraps columns which has
+          <a class="names">flex</a> display property. And each child element,
+          erving as individual columns, has its width set. Then, clear any
+          whitespace with <a class="names">:after</a> property.
+        </p>
+        <pre>
+.future-img {
+            display: flex;
+                      
+            .col.left {
+              width: 45%;
+            }
+          
+            .col.right {
+              width: 55%;
+            }
+
+            .future-img:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+          }</pre
+        >
+
+        <h4>CSS selectors: class</h4>
+        <p>
+          I used class for objects I might reuse again. One instance is the
+          images on the <a class="link" href="past.html">PAST</a> page. I used
+          <a class="names">class="small-img"</a> for every image here, to apply
+          same style (round border and size) more effectively.
+        </p>
+        <pre>
+.small-img {
+        border-radius: 20%;
+        height: 150px;
+      }</pre
+        >
+        <p>
+          Some elements could not be reused wholly as they have both repeating
+          and changing parts. For example, in the content section of the on the
+          <a class="link" href="future.html">FUTURE</a> page, the upper area has
+          photo on its left, while the lower area has it on the right. In this
+          case, I used class names with spaces to apply common styles for the
+          larger class and then set specific styles for each individual classes.
+        </p>
+        <pre>
+&lt;div class="future-img left"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="future-img right"&gt;
+  ...
+&lt;/div&gt;</pre
+        >
+        <p></p>
+        <pre>
+.future-img {
+          display: flex;
+          ...      
+        }
+        
+.future-img.left {
+          ...
+        }
+        
+.future-img.right {
+          ...
+        }</pre
+        >
+        <h4>CSS selectors: id</h4>
+        <p>
+          I used id for appling style to that specific object. One example is
+          the table on the <a class="link" href="past.html">PAST</a> page. I
+          used <a class="names">id="past-table"</a> for the table, and collected
+          all styles and classes that are specifically used for styling this
+          table.
+        </p>
+        <pre>
+#past-table {
+        ...
+      
+        th,
+        td {
+          ...
+        }
+      
+        .img_col {
+          ...
+        }
+      
+        .dates {
+          ...
+        }
+      
+        .detail1 {
+          ...
+        }
+      
+        .detail2 {
+          ...
+        }
+      }</pre
+        >
+      </div>
+      <div class="comment-box">
+        <h3>Aesthetics of my website</h3>
+        <h4>Color scheme</h4>
+        <p>
+          I primarily used navy blue, light sky blue, and light gray across all
+          pages. This color scheme was chosen to create a professional
+          impression of an IT industry.
+        </p>
+        <h4>Layout</h4>
+        <p>
+          At the very top of each page is a navigatio bar, allowing users to
+          easily navigate to their desired page. Except for the index page,
+          every page has a header section at the top, making it easy for users
+          to notice which page they are currently viewing.
+        </p>
+        <p>
+          On the PAST page, I used a table to organize my experiences in a
+          consistent format. On the left side, there is a simple image related
+          to the activity, and on the right side, details are listed in a
+          uniform order and style. This structure allows users to quickly
+          understand the content without additional explanations.
+        </p>
+        <h4>Consistency</h4>
+        <p>
+          As mentioned above, this website provides a sense of consistency
+          through a common layout and color palette across all pages. Each page
+          has the same navigation bar in the same position, with the contents
+          below and a footer centered at the very bottom. Additionally, the
+          title and an icon appears next to it maintain the same format, also
+          contributing to the uniformity of the website overall.
+        </p>
+        <h4>Readability</h4>
+        <p>
+          By leaving sufficient white spaces between elements on each page, I
+          ensured the readability of the website. The space between a paragraph
+          and next heading is larger than the space between regular paragraphs,
+          to indicate the difference in semantic. The
+          <a class="link" href="index.html">INDEX</a> page has more whitespace
+          than COMMENT page, which is because they are distinct in contents.
+          While the COMMENT page contains a lot of texts and technical
+          information, the <a class="link" href="index.html">INDEX</a> page is
+          lighter and intended to be the first landing page for users.Therefore,
+          I added more space on the INDEX page to create a less overwhelming and
+          more comfortable feeling for users.
+        </p>
+      </div>
+      <div class="comment-box">
+        <h3>Accessibility aspects of my website</h3>
+        <h4>ALT</h4>
+        <p>
+          All images on this website inculde alternative text to help disabled
+          users who access the website only through screen readers. For example,
+          the mimoji profile image on the
+          <a class="link" href="index.html">INDEX</a> page contains the
+          following alternative text:
+        </p>
+        <pre>&lt;img src="..." alt="profile image" /&gt;</pre>
+        <h4>Color contrast</h4>
+        <p>
+          I avoided using low-contrasted colors for users who have low vision. I
+          checked the color contrast of main colors I used in this website
+          through
+          <a
+            class="link"
+            href="https://webaim.org/resources/contrastchecker/"
+            target="_blank"
+          >
+            WebAIM Contrast Checker </a
+          >, to make sure that they have enough contrast ratio.
+        </p>
+        <h4>Structure</h4>
+        <p>
+          All contents in this website fit into the logical structure by using
+          heading tags for heading texts. Also, they follow a meaningful order,
+          which aids screen readers in navigating the website more smoothly.
+        </p>
+        <p>
+          Also, the navigation bar is created using
+          <a class="names">&lt;ul&gt;</a> and
+          <a class="names">&lt;li&gt;</a> tags to indicate its semantic as the
+          list of links to screen readers.
+        </p>
+        <h4>Links</h4>
+        <p>
+          The hyperlinks in this website are recognizable compared to plain text
+          by different color. I used <a class="names">link</a> class to apply
+          distinct color style (blue) to texts that serves as a hyperlink.
+        </p>
+        <pre>
+.link {
+          color: #006a95;
+          text-decoration: none;
+        }</pre
+        >
+        <h4>Paragraphs</h4>
+        <p>
+          By limiting the max width of paragraph or the table, it is made sure
+          that the line lengths of paragraphs in this website are not too long.
+        </p>
+      </div>
+    </div>
+    <div class="footer">Copyright (c) Yujeong All rights reserved.</div>
+  </body>
+</html>
